@@ -18,6 +18,12 @@ int[] GenerateArray(int size, int min, int max)
 void PrintArray(int[] arr)
 {
     string text = ", ";
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write($"{arr[i]}");
+        if (i+1<arr.Length) Console.Write(text);
+        
+    }
     Console.Write("[");
     for (int i = 0; i < arr.Length; i++)
     {
