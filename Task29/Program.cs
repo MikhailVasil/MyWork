@@ -15,15 +15,17 @@ int[] GenerateArray(int size, int min, int max)
     return arr;
 }
 
-void PrintArray(int[] arr)
+void PrintArray(int[] array)
 {
-    string text = ", ";
-    Console.Write("[");
-    for (int i = 0; i < arr.Length; i++)
+        for (int i = 0; i < array.Length; i++)
     {
-        Console.Write($"{arr[i]}");
-        if (i+1<arr.Length) Console.Write(text);
+        if (i < array.Length - 1) Console.Write($"{array[i]}, ");
+        else Console.Write($"{array[i]}");
     }
-    Console.Write("]");
-}
-PrintArray(GenerateArray(8, 0, 100));
+    }
+int [] newArray = GenerateArray(8, 0, 100);
+
+PrintArray(newArray);
+Console.Write(" -> [");
+PrintArray(newArray);
+Console.WriteLine("]");
