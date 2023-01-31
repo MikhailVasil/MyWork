@@ -12,13 +12,14 @@
 Console.WriteLine("Enter a three-digit number: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-while(number<100 || number>999)
+while (number < 100 || number > 999)
 {
     Console.WriteLine("Enter a three-digit number: ");
     number = Convert.ToInt32(Console.ReadLine());
 }
-if (number>99 && number<=999){
-number = number /10;
-number = number %10; 
-Console.WriteLine($"Second digit = {number}");
-}
+// if (number > 99 && number <= 999)
+// {
+    number = number / 10;
+    number = number % 10;
+    Console.WriteLine($"Second digit = {number}");
+// 5}
