@@ -24,11 +24,14 @@ Console.Write("Enter b2: ");
 double b2 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Enter k2: ");
 double k2 = Convert.ToInt32(Console.ReadLine());
+if (k1 == k2) Console.WriteLine("parallel lines");
+else
+{
+    double x = SearchX(b1, b2, k1, k2);
+    double xRound = Math.Round(x, 2, MidpointRounding.ToZero);
 
-double x = SearchX(b1, b2, k1, k2);
-double xRound = Math.Round(x, 2, MidpointRounding.ToZero);
+    double y = SearchY(x, k1, b1);
+    double yRound = Math.Round(y, 2, MidpointRounding.ToZero);
 
-double y = SearchY(x, k1, b1);
-double yRound = Math.Round(y, 2, MidpointRounding.ToZero);
-
-Console.WriteLine($"b1 = {b1}, k1 = {k1}, b2 = {b2}, k2 = {k2} -> ({xRound}; {yRound})");
+    Console.WriteLine($"b1 = {b1}, k1 = {k1}, b2 = {b2}, k2 = {k2} -> ({xRound}; {yRound})");
+}
