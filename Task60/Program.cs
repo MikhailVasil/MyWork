@@ -9,7 +9,7 @@
 
 int[,,] CreateThreeDArrayRndInt(int array, int rows, int column)
 {
-    int count = 100;
+    int count = 10;
     int[,,] threeDArray = new int[array, rows, column];
     for (int i = 0; i < threeDArray.GetLength(0); i++)
     {
@@ -44,5 +44,7 @@ void PrintThreeDArray(int[,,] threeDArray)
     }
 }
 
-int[,,] threeDArray = CreateThreeDArrayRndInt(3,3,3);
+int[,,] threeDArray = CreateThreeDArrayRndInt(4,4,5);
+if(threeDArray.GetLength(0)+threeDArray.GetLength(1)+threeDArray.GetLength(2)<14)
 PrintThreeDArray(threeDArray);
+else Console.WriteLine("Does not meet the condition");
