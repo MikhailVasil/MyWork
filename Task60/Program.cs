@@ -17,14 +17,14 @@ int[,,] CreateThreeDArrayRndInt(int array, int rows, int column)
         {
             for (int k = 0; k < threeDArray.GetLength(2); k++)
             {
-                threeDArray[i, j, k] = count;
-                count++;
+                threeDArray[i, j, k] = count++;
+                //count++;
             }  
-            count = count -1;
-            count++;  
+            // count = count -1;
+            // count++;  
         }
-        count = count -1;
-        count++;
+        // count = count -1;
+        // count++;
     }
     return threeDArray;
 }
@@ -44,7 +44,7 @@ void PrintThreeDArray(int[,,] threeDArray)
     }
 }
 
-int[,,] threeDArray = CreateThreeDArrayRndInt(4,4,5);
-if(threeDArray.GetLength(0)+threeDArray.GetLength(1)+threeDArray.GetLength(2)<14)
+int[,,] threeDArray = CreateThreeDArrayRndInt(2,2,22);
+if(threeDArray.GetLength(0)*threeDArray.GetLength(1)*threeDArray.GetLength(2)<90)
 PrintThreeDArray(threeDArray);
 else Console.WriteLine("Does not meet the condition");
